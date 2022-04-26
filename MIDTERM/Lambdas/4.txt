@@ -1,0 +1,17 @@
+A) dva η-ekvivalentné λ-termy sú buďto oba v β-normálnej forme, alebo oba obsahujú β-redex.
+neplatí(kontrapríklad): (\x.f x) y =eta= f y 
+ 
+
+B) ak λ-term nie je v β-normálnej forme (obsahuje β-redex), potom β-redukcia zmení tento λ-term. Inými slovami, λ-termy pred a po β-redukcii sú vždy rôzne,
+neplatí(kontrapríklad): (λx.xx) (λx.xx) ->B (λx.xx) (λx.xx)
+ 
+
+C) dva λ-termy pred a po β-redukcii sú η-ekvivalentné,
+neplatí(kontrapríklad): (\x.(x x)) z ->B (z z)
+ 
+
+D) β-redukcia zachováva η-ekvivalenciu - ak dva termy, ktoré nie sú v normálnej forme (s nejakým β-redexom), sú η-ekvivalentné λ-termy, potom tieto λ-termy po β-redukcii sú tiež η-ekvivalentné
+neplatí(kontrapríklad): \y.((\x.c) y) z =eta= (\x.c) z
+\y.((\x.c) y) z ->B (\y.c) z =!eta!= c B<- (\x.c) z
+
+\x.(\x.(f x) x) =eta= f
